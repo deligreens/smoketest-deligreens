@@ -1,5 +1,15 @@
 require 'sinatra'
 require 'stripe'
+require 'dotenv'
+require 'pry-byebug'
+require 'better_errors'
+
+configure :development do
+  use BetterErrors::Middleware
+  BetterErrors.application_root = File.expand_path('..', __FILE__)
+end
+
+Dotenv.load
 
 set :publishable_key, ENV['PUBLISHABLE_KEY']
 set :secret_key, ENV['SECRET_KEY']
@@ -14,7 +24,7 @@ post '/charge' do
   @amount = 500
 
   customer = Stripe::Customer.create(
-    :email => 'customer@example.com',
+    :email => params[:stripeEmail],
     :card  => params[:stripeToken]
   )
 
