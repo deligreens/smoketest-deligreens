@@ -16,7 +16,7 @@ get '/' do
   erb :index
 end
 
-post '/charge' do
+post '/bienvenue' do
   @amount = 8997
   @amount_humanize = @amount / 100.0
 
