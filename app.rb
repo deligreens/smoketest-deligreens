@@ -10,14 +10,14 @@ set :secret_key, ENV['SECRET_KEY']
 Stripe.api_key = settings.secret_key
 
 get '/' do
-  @amount = 8997
+  @amount = 9000
   @amount_humanize = @amount / 100.0
 
-  erb :index
+  erb :index, :layout => false
 end
 
 post '/bienvenue' do
-  @amount = 8997
+  @amount = 9000
   @amount_humanize = @amount / 100.0
 
   customer = Stripe::Customer.create(
