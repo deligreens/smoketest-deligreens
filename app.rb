@@ -4,8 +4,8 @@ require 'dotenv'
 
 Dotenv.load
 
-set :publishable_key, ENV['PUBLISHABLE_KEY']
-set :secret_key, ENV['SECRET_KEY']
+set :publishable_key, ENV['PUBLISHABLE_KEY_LIVE']
+set :secret_key, ENV['SECRET_KEY_LIVE']
 
 Stripe.api_key = settings.secret_key
 
@@ -14,14 +14,14 @@ get '/' do
 end
 
 get '/abonnement' do
-  @amount = 9000
+  @amount = 100
   @amount_humanize = @amount / 100.0
 
   erb :abonnement, :layout => false
 end
 
 post '/bienvenue' do
-  @amount = 9000
+  @amount = 100
   @amount_humanize = @amount / 100.0
 
   customer = Stripe::Customer.create(
