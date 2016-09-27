@@ -36,5 +36,5 @@ post '/bienvenue' do
     :customer    => customer
   )
 
-  erb :charge
+  erb :charge, :layout => false
 end
