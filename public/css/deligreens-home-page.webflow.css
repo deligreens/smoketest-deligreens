@@ -60,6 +60,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   min-height: auto;
+  max-height: 100vh;
   padding-bottom: 0px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -129,8 +130,8 @@ h6 {
 }
 
 .side-block.potatoes {
-  height: 800px;
-  min-height: 0vh;
+/*  height: 800px;
+  min-height: 0vh;*/
   min-width: 60%;
   padding: 0%;
   background-image: -webkit-linear-gradient(15deg, transparent 70%, #fff 0), url('../images/unsplash_resized.jpg');
@@ -149,6 +150,11 @@ h6 {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+}
+
+.side-block.abonnement.thank-you {
+  margin-top: 0px;
+  padding-top: 68px;
 }
 
 .feature {
@@ -192,6 +198,10 @@ h6 {
   font-size: 22px;
   font-style: italic;
   text-align: center;
+}
+
+.feature.abonnement.thank-you {
+  line-height: 34px;
 }
 
 .sign-in {
@@ -942,6 +952,16 @@ h6 {
 
 .abonnement {
   color: #2f4757;
+}
+
+.hate {
+  margin-top: 0px;
+  padding-top: 0px;
+  font-weight: 800;
+}
+
+.merci {
+  font-weight: 800;
 }
 
 @media (max-width: 991px) {
