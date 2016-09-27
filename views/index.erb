@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Fri Sep 23 2016 13:38:52 GMT+0000 (UTC) -->
-<html data-wf-page="57e51c775ca171515efdcfdb" data-wf-site="57d800df270afde94894ffed">
+<!-- Last Published: Tue Sep 27 2016 15:11:57 GMT+0000 (UTC) -->
+<html data-wf-page="57ea7eb706f8c9724dc38a09" data-wf-site="57d800df270afde94894ffed">
 <head>
   <meta charset="utf-8">
-  <title>abonnement 3 mois discount</title>
-  <meta content="abonnement 3 mois discount" property="og:title">
+  <title>Home page alternate</title>
+  <meta content="Home page alternate" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -20,110 +20,50 @@
     });
   </script>
   <script src="js/modernizr.js" type="text/javascript"></script>
-  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/0719/1357/t/52/assets/favicon.png?14691352031239233277" type="image/png" />
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
-<body class="body">
-  <div class="flex-parent pricing">
-    <div class="potatoes side-block"></div>
-    <div class="abonnement side-block">
-      <h1 class="abonnement hero-title">FINANCEZ VOTRE&nbsp;<span class="super">SUPER</span> MARCHÉ !</h1>
-      <h3 class="lancement">OFFRE DE LANCEMENT RESERVÉE AUX CLIENTS DELIGREENS</h3>
-      <div class="abonnement">
+<body>
+  <div class="home-alternate">
+    <div class="w-container"><img class="logo" src="images/logo_blanc.svg" width="108">
+      <h1 class="alternate hero-title">LE SUPERMARCHÉ EST MORT,<br>VIVE LE <span class="super">SUPER</span> MARCHÉ !</h1>
+      <div class="alternate-feature">
         <div class="div-feature"><img class="checkmark" src="images/check mark.svg" width="20">
-          <h4 class="feature">Des super produits livrés dans votre cuisine</h4>
+          <h4 class="alternate feature">Des super produits livrés dans votre cuisine</h4>
         </div>
         <div class="div-feature"><img class="checkmark" src="images/check mark.svg" width="20">
-          <h4 class="feature">Des prix qui ont un sens</h4>
+          <h4 class="alternate feature">Des prix qui ont un sens</h4>
         </div>
         <div class="div-feature"><img class="checkmark" src="images/check mark.svg" width="20">
-          <h4 class="feature">Du bio, du local, du bio &amp; local</h4>
+          <h4 class="alternate feature">Du bio, du local, du bio &amp; local</h4>
         </div>
         <div class="div-feature"><img class="checkmark" src="images/check mark.svg" width="20">
-          <h4 class="feature">Livraison gratuite à partir de 59€ d'achat</h4>
+          <h4 class="alternate feature">Livraison gratuite à partir de 59€ d'achat</h4>
         </div>
       </div>
-      <h5 class="abonnement feature">6 MOIS D'ABONNEMENT AU PRIX DE 3 MOIS</h5>
-<!--       <div class="form-wrapper w-form">
-        <form class="sign-up" data-name="Email Form" id="email-form" name="email-form">
-          <input class="abonnement submit-button w-button" data-wait="Un petit instant..." type="submit" value="6 MOIS D&#39;ABONNEMENT - 90€">
-        </form>
-        <div class="w-form-done">
-          <div>Thank you! Your submission has been received!</div>
-        </div>
-        <div class="w-form-fail">
-          <div>Oops! Something went wrong while submitting the form</div>
-        </div>
-      </div> -->
-
-      <div id="stripe-form">
-        <form action="/bienvenue" method="post">
-          <script
-            src="https://checkout.stripe.com/v3/checkout.js" class="stripe-button"
-            data-key="<%= settings.publishable_key %>"
-            data-label="6 mois d'abonnement - 90€"
-            data-name="Deligreens"
-            data-description="Abonnement 6 mois au prix de 3 mois"
-            data-image="https://dl.dropboxusercontent.com/u/42217280/logo_deligreens_github.png"
-            data-amount="<%= @amount %>"
-            data-locale="auto"
-            data-currency="eur">
-          </script>
-        </form>
-      </div>
-
+      <h5 class="abonnement alternate feature"><em class="lancement">LANCEMENT IMMINENT !</em></h5>
     </div>
-  </div>
-  <div class="ambition">
-    <div class="w-container">
-      <h2>ACHETER SUR DELIGREENS, C'EST FINANCER DE GRANDES AMBITIONS</h2><img class="target" src="images/target.svg">
-      <div class="flex-parent">
-        <div class="sideblock2">
-          <h3>PRIORITÉ AU BIO</h3>
-        </div>
-        <div class="sideblock2">
-          <h3>PRIORITÉ AU LOCAL</h3>
-        </div>
-        <div class="sideblock2">
-          <h3>PRIORITÉ AU VRAC</h3>
-        </div>
-        <div class="sideblock2">
-          <h3>ZERO GASPILLAGE</h3>
-        </div>
-        <div class="sideblock2">
-          <h3>+75% AUX&nbsp;PRODUCTEURS</h3>
+    <div class="block-flex-verti">
+      <div class="footer-part-1">
+        <div class="w-container">
+          <h1 class="alternate footer titre">INSCRIVEZ-VOUS À LA NEWSLETTER</h1>
+          <div class="alternate footer soustitre">Pour ne pas manquer le lancement</div>
+          <div class="form-wrapper nl w-form">
+            <!-- Begin MailChimp Signup Form -->
+            <form class="form-nl" action="//deligreens.us9.list-manage.com/subscribe/post?u=e99616db31d25dfda8f0ded81&amp;id=34b78bec00" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <input autofocus="autofocus" class="text-field w-input" maxlength="256" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Votre email" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e99616db31d25dfda8f0ded81_34b78bec00" tabindex="-1" value=""></div>
+              <input type="submit" value="GO !" name="subscribe" id="mc-embedded-subscribe" class="nl submit-button w-button">
+            </form>
+            <!--End mc_embed_signup-->
+          </div>
         </div>
       </div>
-      <p class="mission">Chez Deligreens, nous avons le rêve un peu fou de réinventer le concept de supermarché. Notre mission pour 2022 : prouver qu'il est possible de faire grandir une enseigne qui soit en mesure de rendre des comptes sans mentir sur tous les aspects de ce que nous jugeons être une consommation responsable : le bio, le local, la gestion des emballages, les dépenses énergétiques, le gaspillage et une répartition juste de la valeur ajoutée. En rejoignant la communauté Deligreens, vous financez cette ambition au quotidien, à chaque bon petit plat que vous cuisinez.</p>
-    </div>
-    <div class="button flex-parent">
-      <form action="/bienvenue" method="post">
-        <script
-          src="https://checkout.stripe.com/v3/checkout.js" class="stripe-button"
-          data-key="<%= settings.publishable_key %>"
-          data-label="6 mois d'abonnement - 90€"
-          data-name="Deligreens"
-          data-description="Abonnement 6 mois au prix de 3 mois"
-          data-image="https://dl.dropboxusercontent.com/u/42217280/logo_deligreens_github.png"
-          data-amount="<%= @amount %>"
-          data-locale="auto"
-          data-currency="eur">
-        </script>
-      </form>
-    </div>
-  </div>
-  <div class="footertab">
-    <div class="container-frigo w-container">
-      <div class="deligreens-logo frigo">REDONNEZ DE LA <span class="c">C</span><span class="o">O</span><span class="u">U</span><span class="l">L</span><span class="e">E</span><span class="u">U</span><span class="r">R</span> À VOTRE&nbsp;</div><img class="fridge" src="images/fridge.svg" width="34">
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-  <script>
-    $(".stripe-button-el").removeClass("stripe-button-el").addClass("abonnement submit-button w-button");
-    $("button").find("span").css('min-height', '');
-  </script>
 </body>
 </html>

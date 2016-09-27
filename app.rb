@@ -10,10 +10,14 @@ set :secret_key, ENV['SECRET_KEY']
 Stripe.api_key = settings.secret_key
 
 get '/' do
+  erb :index, :layout => false
+end
+
+get '/abonnement' do
   @amount = 9000
   @amount_humanize = @amount / 100.0
 
-  erb :index, :layout => false
+  erb :abonnement, :layout => false
 end
 
 post '/bienvenue' do
@@ -32,5 +36,5 @@ post '/bienvenue' do
     :customer    => customer
   )
 
-  erb :charge
+  erb :charge, :layout => false
 end
