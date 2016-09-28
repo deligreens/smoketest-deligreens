@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Tue Sep 27 2016 15:11:57 GMT+0000 (UTC) -->
+<!-- Last Published: Wed Sep 28 2016 15:09:33 GMT+0000 (UTC) -->
 <html data-wf-page="57e51c775ca171515efdcfdb" data-wf-site="57d800df270afde94894ffed">
 <head>
   <meta charset="utf-8">
   <title>Deligreens - Abonnement</title>
-  <meta content="abonnement 3 mois discount" property="og:title">
+  <meta content="Deligreens - Abonnement" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -44,20 +44,27 @@
         </div>
       </div>
       <h5 class="abonnement feature">6 MOIS D'ABONNEMENT AU PRIX DE 3 MOIS</h5>
-      <form action="/bienvenue" method="post">
-        <script
-          src="https://checkout.stripe.com/v3/checkout.js" class="stripe-button"
-          data-key="<%= settings.publishable_key %>"
-          data-label="6 mois d'abonnement - 90€"
-          data-name="Deligreens"
-          data-description="Abonnement 6 mois au prix de 3 mois"
-          data-image="https://dl.dropboxusercontent.com/u/42217280/logo_deligreens_github.png"
-          data-amount="<%= @amount %>"
-          data-locale="auto"
-          data-currency="eur">
-        </script>
-      </form>
+      <div class="form-wrapper w-form">
+        <form action="/bienvenue" method="post">
+          <script
+            src="https://checkout.stripe.com/v3/checkout.js" class="stripe-button"
+            data-key="<%= settings.publishable_key %>"
+            data-label="6 MOIS D'ABONNEMENT (-50%) : 90€"
+            data-name="Deligreens"
+            data-description="Abonnement 6 mois au prix de 3 mois"
+            data-image="https://dl.dropboxusercontent.com/u/42217280/logo_deligreens_github.png"
+            data-amount="<%= @amount %>"
+            data-locale="auto"
+            data-currency="eur">
+          </script>
+        </form>
+      </div>
     </div>
+  </div>
+  <div class="alternate vu-dans">
+    <h2 class="alternate">L'abonnement Deligreens est à 30€ par mois.</h2>
+    <div class="description">De très bons produits, à des prix raisonnables, livrés dans votre cuisine par un(e) livreur(se) sympa : c'est notre engagement.</div>
+    <div class="logo-media"></div>
   </div>
   <div class="ambition">
     <div class="w-container">
@@ -86,7 +93,7 @@
         <script
           src="https://checkout.stripe.com/v3/checkout.js" class="stripe-button"
           data-key="<%= settings.publishable_key %>"
-          data-label="6 mois d'abonnement - 90€"
+          data-label="6 MOIS D'ABONNEMENT (-50%) : 90€"
           data-name="Deligreens"
           data-description="Abonnement 6 mois au prix de 3 mois"
           data-image="https://dl.dropboxusercontent.com/u/42217280/logo_deligreens_github.png"
