@@ -193,7 +193,7 @@ h6 {
 .feature.abonnement {
   margin-top: 20px;
   margin-bottom: 28px;
-  color: #5e8aa7;
+  color: #718a9c;
   font-size: 22px;
   font-style: italic;
   text-align: center;
@@ -981,6 +981,7 @@ h6 {
   margin-top: 0px;
   margin-bottom: 40px;
   font-size: 32px;
+  line-height: 35px;
 }
 
 .abonnement {
@@ -998,7 +999,7 @@ h6 {
 }
 
 .home-alternate {
-  min-height: 100vh;
+  height: 100vh;
   background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .19), rgba(0, 0, 0, .19)), url('../images/unsplash_resized.jpg');
   background-image: linear-gradient(180deg, rgba(0, 0, 0, .19), rgba(0, 0, 0, .19)), url('../images/unsplash_resized.jpg');
   background-position: 0px 0px, 0px 0px;
@@ -1016,6 +1017,20 @@ h6 {
 .alternate-feature {
   margin-left: 121px;
   padding-left: 0px;
+}
+
+.alternate {
+  font-style: normal;
+}
+
+.description {
+  margin-top: 20px;
+  padding-right: 5%;
+  padding-left: 5%;
+  color: #c5cdd3;
+  font-size: 19px;
+  line-height: 22px;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 991px) {
