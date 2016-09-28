@@ -48,6 +48,7 @@
         <div class="w-container">
           <h1 class="alternate footer titre">INSCRIVEZ-VOUS À LA NEWSLETTER</h1>
           <div class="alternate footer soustitre">Pour ne pas manquer le lancement</div>
+          <p id='message-sub' style='color: white; text-align: center; display: none'>Merci de vérifier votre email</p>
           <div class="form-wrapper nl w-form">
             <!-- Begin MailChimp Signup Form -->
             <form class="form-nl" action="//deligreens.us9.list-manage.com/subscribe/post?u=e99616db31d25dfda8f0ded81&amp;id=34b78bec00" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -65,6 +66,36 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script>
+    // $('#mc-embedded-subscribe').click(function() {
+    //   // $('.alternate.footer.titre').css('text-align', 'center');
+    //   setTimeout(function () {
+    //     // $('#message-sub').show('slow');
+    //     $('.soustitre.footer.alternate').text('Merci de vérifier votre email')
+    //   }, 1200);
+    // });
+    //
+    $('#mc-embedded-subscribe').click(function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'https://deligreens.us9.list-manage.com/subscribe/post-json?u=e99616db31d25dfda8f0ded81&amp;id=34b78bec00&c=?',
+            type: 'GET',
+            data: $('#mc-embedded-subscribe-form').serialize(),
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+               if (data['result'] != "success") {
+                    //ERROR
+                    $('.soustitre.footer.alternate').text('Vous êtes déjà inscrit ou l\'email est incorrect');
+               } else {
+                    //SUCCESS - Do what you like here
+                    $('.soustitre.footer.alternate').text('Merci de vérifier votre email');
+                    $('#mc-embedded-subscribe-form').hide('slow');
+               }
+            }
+        });
+    });
+  </script>
   <script>
     (function(t,a,l,k,u,s,e){if(!t[u]){t[u]=function(){(t[u].q=t[u].q||[]).push(arguments)},t[u].l=1*new Date();s=a.createElement(l),e=a.getElementsByTagName(l)[0];s.async=1;s.src=k;e.parentNode.insertBefore(s,e)}})(window,document,'script','//www.talkus.io/plugin.beta.js','talkus');
     talkus('init', 'JS7yBf2c3rsm9Fcws');
