@@ -31,7 +31,7 @@ post '/bienvenue' do
 
   charge = Stripe::Charge.create(
     :amount      => @amount,
-    :description => 'Abonnement Deligreens 3 mois',
+    :description => 'Abonnement Deligreens 6 mois au prix de 3 mois',
     :currency    => 'eur',
     :customer    => customer
   )
