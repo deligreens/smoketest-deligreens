@@ -1245,3 +1245,8 @@ h6 {
     margin-left: 20px;
   }
 }
+
+.phone-number {
+  padding: 5% 0;
+  background-color: #F9F8F4;
+}
